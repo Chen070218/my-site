@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>About — Field Notes</title>
+  <meta name="description" content="About this learning site, how it was built, the decisions behind it and what I would change.">
+  <meta property="og:title" content="About — Field Notes">
+  <meta property="og:description" content="About this learning site and how it was built.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="images/og-cover.png">
+  <meta name="theme-color" content="#f5f0e4">
+  <link rel="icon" href="favicon-32.png" sizes="32x32" type="image/png">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="site-header__inner">
+      <a class="brand" href="index.html">
+        <span class="brand__mark">FN / 26</span>
+        <span class="brand__name">Field Notes</span>
+      </a>
+      <div data-nav aria-busy="true"></div>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="section">
+      <div class="wrap">
+        <p class="kicker">About · colophon</p>
+        <h1>About this notebook</h1>
+        <p class="lede">
+          Field Notes is the learning website for my Web Technologies course. It is not a
+          portfolio and it is not a product: it is a place to practise the three languages of
+          the web and to write down what each one taught me.
+        </p>
+
+        <div class="prose-block">
+          <h2>Who writes it</h2>
+          <p>
+            I am Chen Xiangyang, a Computer Science student in the 2025 intake at Hainan
+            Bielefeld University of Applied Sciences. I am learning programming, algorithms
+            and operating systems, plus German and English. This site is the smaller of my
+            two course projects; the larger one is my
+            <a href="https://cxy0218-blog.pages.dev/" target="_blank" rel="noopener noreferrer">personal site</a>.
+          </p>
+
+          <h2>How it is built</h2>
+          <p>
+            Every page is hand-written HTML. There is no framework, no package manager and no
+            build step: the files in this repository are exactly what the browser receives.
+            One stylesheet holds the whole visual system, and three small scripts handle the
+            navigation, the random quote and the machine page.
+          </p>
+          <p>
+            The navigation is the clearest example of the approach. It lives once in
+            <code>nav.html</code>; <code>nav.js</code> fetches that fragment and inserts it
+            into every page, then marks the current page with <code>aria-current</code>. Adding
+            a page means editing one file instead of five.
+          </p>
+
+          <h2>Decisions I made</h2>
+          <ul>
+            <li>
+              <strong>Paper instead of glass.</strong> The palette is warm paper, ink,
+              vermilion and teal. The grid in the background is drawn with two CSS gradients,
+              so the whole texture costs no image request.
+            </li>
+            <li>
+              <strong>Semantic HTML first.</strong> Landmarks, one <code>h1</code> per page,
+              heading levels in order, real <code>blockquote</code> and <code>cite</code>
+              elements on the quotes page, and buttons that are actually buttons.
+            </li>
+            <li>
+              <strong>Accessibility as a constraint, not a checklist.</strong> The skip link,
+              visible focus, labelled tiles, live status messages, and a keyboard-playable
+              game came before the decoration. Every animation has a reduced-motion version.
+            </li>
+            <li>
+              <strong>No third-party images or fonts.</strong> The hero map and the icons were
+              drawn for this project with a short Python script; the type is whatever the
+              system already has. That keeps the site fast and avoids licence questions.
+            </li>
+            <li>
+              <strong>Small state only.</strong> The bug game keeps its best score in
+              <code>localStorage</code>. Nothing else is stored and there is no tracking.
+            </li>
+          </ul>
+
+          <h2>What I would change</h2>
+          <p>
+            I would like the quotes page to remember the last quote instead of choosing a new
+            one on every visit, and I would make the bug game slightly harder each round. The
+            layout would also benefit from a real content page — one long note — to test the
+            reading styles at a length this site does not have yet.
+          </p>
+
+          <h2>Credits</h2>
+          <p>
+            Text and images: Chen Xiangyang. Hero illustration and icons: drawn for this
+            project with Python and Pillow. Quotes are short excerpts attributed to their
+            authors on the quotes page. Course: Web Technologies, BiUH, 2026.
+          </p>
+
+          <h2>Contact</h2>
+          <p>
+            The quickest way to reach me is through my
+            <a href="https://github.com/Chen070218" target="_blank" rel="noopener noreferrer">GitHub profile</a>.
+            The source of this site lives in the <code>my-site</code> repository.
+          </p>
+        </div>
+
+        <hr class="rule">
+        <dl class="fact-grid">
+          <div class="fact">
+            <dt>Role</dt>
+            <dd>Student, 2025 intake</dd>
+          </div>
+          <div class="fact">
+            <dt>Course</dt>
+            <dd>Web Technologies · BiUH</dd>
+          </div>
+          <div class="fact">
+            <dt>Built</dt>
+            <dd>Autumn 2026</dd>
+          </div>
+          <div class="fact">
+            <dt>Stack</dt>
+            <dd>HTML · CSS · JavaScript</dd>
+          </div>
+        </dl>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="site-footer__inner">
+      <span>© 2026 Chen Xiangyang · Field Notes</span>
+      <span class="site-footer__links">
+        <a href="https://cxy0218-blog.pages.dev/" target="_blank" rel="noopener noreferrer">Personal site ↗</a>
+        <a href="index.html">Back to top</a>
+      </span>
+    </div>
+  </footer>
+
+  <script src="nav.js"></script>
+</body>
+</html>
