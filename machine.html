@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>The useless machine — Field Notes</title>
+  <meta name="description" content="A switch that turns itself off, and a small bug-squashing game, both written in plain JavaScript.">
+  <meta property="og:title" content="The useless machine — Field Notes">
+  <meta property="og:description" content="A switch that turns itself off, and a small bug-squashing game.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="images/og-cover.png">
+  <meta name="theme-color" content="#f5f0e4">
+  <link rel="icon" href="favicon-32.png" sizes="32x32" type="image/png">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="site-header__inner">
+      <a class="brand" href="index.html">
+        <span class="brand__mark">FN / 26</span>
+        <span class="brand__name">Field Notes</span>
+      </a>
+      <div data-nav aria-busy="true"></div>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="section">
+      <div class="wrap">
+        <p class="kicker">Machine · two toys</p>
+        <h1>The pointless machine, and a game</h1>
+        <p class="lede">
+          The first machine exists only to switch itself off. The second one exists only to
+          be played with for thirty seconds. Both are here to practise state, timers and the
+          small details that make an interface feel alive.
+        </p>
+      </div>
+    </section>
+
+    <section class="section section--tight" aria-labelledby="useless-title">
+      <div class="wrap">
+        <h2 id="useless-title" class="kicker">01 — The useless machine</h2>
+
+        <div class="machine" id="machine">
+          <p class="machine__label">There is exactly one switch</p>
+          <div class="machine__stage" aria-hidden="true">
+            <div class="machine__post"></div>
+            <div class="machine__arm"><span class="machine__hand"></span></div>
+            <div class="machine__base"></div>
+          </div>
+          <button class="machine__switch" type="button" id="machine-switch" aria-pressed="false">
+            Turn it on
+          </button>
+          <p class="machine__status" id="machine-status" role="status" aria-live="polite">
+            Off. It is waiting for you to make the first move.
+          </p>
+        </div>
+
+        <p class="lede" style="margin-top: 1.25rem;">
+          The rule of a useless machine is simple: you switch it on, an arm comes out and
+          switches it off again. It has no other purpose. The version above uses one class,
+          one timeout and a rotation.
+        </p>
+      </div>
+    </section>
+
+    <section class="section section--tight" aria-labelledby="game-title">
+      <div class="wrap">
+        <div class="game">
+          <div class="game__head">
+            <h2 id="game-title" class="kicker">02 — Bug squash</h2>
+          </div>
+          <p class="lede">
+            A bug is hiding somewhere in the grid. It jumps to a new cell every second.
+            Click or tap it before it moves. Thirty seconds, keyboard friendly.
+          </p>
+
+          <div class="game__stats">
+            <span>Score <strong id="game-score">0</strong></span>
+            <span>Misses <strong id="game-misses">0</strong></span>
+            <span>Time <strong id="game-time">30</strong>s</span>
+            <span>Best <strong id="game-best">—</strong></span>
+          </div>
+
+          <div class="game__board" id="game-board" role="group" aria-label="Bug squash board">
+            <button class="game__tile" type="button" aria-label="Empty tile">·</button>
+            <button class="game__tile" type="button" aria-label="Empty tile">·</button>
+            <button class="game__tile" type="button" aria-label="Empty tile">·</button>
+            <button class="game__tile" type="button" aria-label="Empty tile">·</button>
+            <button class="game__tile" type="button" aria-label="Empty tile">·</button>
+            <button class="game__tile" type="button" aria-label="Empty tile">·</button>
+            <button class="game__tile" type="button" aria-label="Empty tile">·</button>
+            <button class="game__tile" type="button" aria-label="Empty tile">·</button>
+            <button class="game__tile" type="button" aria-label="Empty tile">·</button>
+          </div>
+
+          <p class="game__note" id="game-note" role="status" aria-live="polite">
+            Press start, then catch the bug.
+          </p>
+
+          <div class="game__actions">
+            <button class="button" type="button" id="game-start">Start game</button>
+            <button class="button button--ghost" type="button" id="game-reset">Forget best score</button>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="site-footer__inner">
+      <span>© 2026 Chen Xiangyang · Field Notes</span>
+      <span class="site-footer__links">
+        <a href="https://cxy0218-blog.pages.dev/" target="_blank" rel="noopener noreferrer">Personal site ↗</a>
+        <a href="index.html">Back to top</a>
+      </span>
+    </div>
+  </footer>
+
+  <script src="nav.js"></script>
+  <script src="machine.js"></script>
+</body>
+</html>

@@ -1,0 +1,164 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Project ideas — Field Notes</title>
+  <meta name="description" content="Six project ideas for practising HTML, CSS and JavaScript, with the skills each one teaches.">
+  <meta property="og:title" content="Project ideas — Field Notes">
+  <meta property="og:description" content="Six project ideas for practising HTML, CSS and JavaScript.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="images/og-cover.png">
+  <meta name="theme-color" content="#f5f0e4">
+  <link rel="icon" href="favicon-32.png" sizes="32x32" type="image/png">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="site-header__inner">
+      <a class="brand" href="index.html">
+        <span class="brand__mark">FN / 26</span>
+        <span class="brand__name">Field Notes</span>
+      </a>
+      <div data-nav aria-busy="true"></div>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="section">
+      <div class="wrap">
+        <p class="kicker">Ideas · six directions</p>
+        <h1>Six things I would build next</h1>
+        <p class="lede">
+          Learning goes faster when the next exercise is something I actually want to use.
+          Each idea below names the skill it would force me to practise, and why it is
+          worth the time.
+        </p>
+
+        <div class="section--tight" aria-label="Project ideas">
+          <article class="idea">
+            <div class="idea__head">
+              <h2>Campus weather wall</h2>
+              <span class="idea__tag">Intermediate</span>
+            </div>
+            <p>
+              A page that combines the current weather at the campus with the last photo I
+              took there. It would refresh every ten minutes and show a short sentence
+              instead of a wall of numbers.
+            </p>
+            <ul class="idea__meta">
+              <li>Fetch API and JSON</li>
+              <li>Loading and error states</li>
+              <li>Responsive image pairing</li>
+            </ul>
+          </article>
+
+          <article class="idea">
+            <div class="idea__head">
+              <h2>Study timer garden</h2>
+              <span class="idea__tag">Starter</span>
+            </div>
+            <p>
+              A pomodoro timer where every finished session grows a plant on a small grid.
+              The plants live in <code>localStorage</code>, so the garden survives a reload.
+            </p>
+            <ul class="idea__meta">
+              <li>Timers and state</li>
+              <li><code>localStorage</code></li>
+              <li>CSS grid and transforms</li>
+            </ul>
+          </article>
+
+          <article class="idea">
+            <div class="idea__head">
+              <h2>Course notes search</h2>
+              <span class="idea__tag">Intermediate</span>
+            </div>
+            <p>
+              A single page that loads my course notes and filters them as I type. No server:
+              the notes are an array in one file, and the search highlights the matching words.
+            </p>
+            <ul class="idea__meta">
+              <li>Arrays and <code>filter</code></li>
+              <li>Event handling</li>
+              <li>Accessible search fields</li>
+            </ul>
+          </article>
+
+          <article class="idea">
+            <div class="idea__head">
+              <h2>Where did my week go</h2>
+              <span class="idea__tag">Intermediate</span>
+            </div>
+            <p>
+              A check-in heat-map: one square per day, darker where I studied longer. It would
+              make the invisible weeks visible, and it is a good excuse to practise data
+              shapes and colour scales.
+            </p>
+            <ul class="idea__meta">
+              <li>Data modelling</li>
+              <li>CSS colour scales</li>
+              <li>Dates in JavaScript</li>
+            </ul>
+          </article>
+
+          <article class="idea">
+            <div class="idea__head">
+              <h2>An accessibility field guide</h2>
+              <span class="idea__tag">Ambitious</span>
+            </div>
+            <p>
+              An interactive checklist for the things I keep forgetting: focus order, labels,
+              contrast, reduced motion. Each item would come with a small live example that
+              shows the good and the bad version.
+            </p>
+            <ul class="idea__meta">
+              <li>Forms and ARIA</li>
+              <li>Keyboard testing</li>
+              <li>Teaching by example</li>
+            </ul>
+          </article>
+
+          <article class="idea">
+            <div class="idea__head">
+              <h2>Tiny CSS gallery</h2>
+              <span class="idea__tag">Starter</span>
+            </div>
+            <p>
+              A gallery of small scenes drawn with nothing but CSS: gradients, shadows and a
+              lot of pseudo-elements. No image files at all, which makes it a good test of
+              how far layout primitives can go.
+            </p>
+            <ul class="idea__meta">
+              <li>Gradients and shadows</li>
+              <li>Pseudo-elements</li>
+              <li>Creative constraints</li>
+            </ul>
+          </article>
+        </div>
+
+        <hr class="rule">
+        <p class="lede">
+          Pick one, keep the scope small, and write down what broke. The notes are more
+          useful than the finished page.
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="site-footer__inner">
+      <span>© 2026 Chen Xiangyang · Field Notes</span>
+      <span class="site-footer__links">
+        <a href="https://cxy0218-blog.pages.dev/" target="_blank" rel="noopener noreferrer">Personal site ↗</a>
+        <a href="index.html">Back to top</a>
+      </span>
+    </div>
+  </footer>
+
+  <script src="nav.js"></script>
+</body>
+</html>
