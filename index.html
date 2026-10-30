@@ -1,0 +1,188 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Field Notes — learning the web by hand</title>
+  <meta name="description" content="A hand-written learning site about HTML, CSS and JavaScript: notes, quotes, project ideas and a useless machine.">
+  <meta property="og:title" content="Field Notes — learning the web by hand">
+  <meta property="og:description" content="A hand-written learning site about HTML, CSS and JavaScript: notes, quotes, project ideas and a useless machine.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="images/og-cover.png">
+  <meta name="theme-color" content="#f5f0e4">
+  <link rel="icon" href="favicon-32.png" sizes="32x32" type="image/png">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="site-header__inner">
+      <a class="brand" href="index.html">
+        <span class="brand__mark">FN / 26</span>
+        <span class="brand__name">Field Notes</span>
+      </a>
+      <div data-nav aria-busy="true"></div>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero">
+      <div class="wrap">
+        <figure class="hero__figure">
+          <img src="images/hero-field-notes.webp" width="1600" height="900" alt="A drawn map of the course: a large orange circle, a teal curve and paper notes labelled HTML, CSS and JavaScript.">
+          <figcaption class="hero__caption">
+            <span>Figure 1 — a map of the course</span>
+            <span>BiUH · Web Technologies · 2026</span>
+          </figcaption>
+        </figure>
+
+        <div class="hero__text">
+          <p class="kicker">Learning HTML · a site built by hand</p>
+          <h1>A field notebook for the web</h1>
+          <p class="lede">
+            This is where I keep what I learn while building for the web: the rules of
+            HTML, the patience of CSS, and the small pieces of JavaScript that make a
+            page answer back. Everything here was written in plain HTML, CSS and
+            JavaScript — no framework, no build step.
+          </p>
+          <div class="hero__actions">
+            <a class="button" href="quotes.html">Read the quotes</a>
+            <a class="button button--ghost" href="machine.html">Meet the useless machine</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="on-this-site">
+      <div class="wrap">
+        <p class="kicker">The contents</p>
+        <h2 id="on-this-site">What is on this site</h2>
+        <p class="lede">Four small pages, each one practising a different part of the same toolkit.</p>
+
+        <div class="card-grid">
+          <a class="card" href="quotes.html">
+            <h3>Quotes</h3>
+            <p>Eighteen lines about learning, code and craft — plus a hero that picks one at random.</p>
+            <span class="card__meta">18 quotes →</span>
+          </a>
+          <a class="card" href="project.html">
+            <h3>Project ideas</h3>
+            <p>Six things I would like to build next, with the skill each one would teach me.</p>
+            <span class="card__meta">6 ideas →</span>
+          </a>
+          <a class="card" href="machine.html">
+            <h3>The useless machine</h3>
+            <p>A switch, an arm, and the most pointless machine ever built — followed by a small game.</p>
+            <span class="card__meta">2 toys →</span>
+          </a>
+          <a class="card" href="about.html">
+            <h3>About</h3>
+            <p>Who writes this, how the site is made, and what I would do differently.</p>
+            <span class="card__meta">Colophon →</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--tight" aria-labelledby="practised">
+      <div class="wrap">
+        <hr class="rule">
+        <p class="kicker">The work behind it</p>
+        <h2 id="practised">What I practised</h2>
+
+        <ol class="numbered">
+          <li>
+            <span class="num">01</span>
+            <div>
+              <h3>Semantic HTML</h3>
+              <p>Starting from landmarks — <code>header</code>, <code>nav</code>, <code>main</code>,
+                <code>footer</code> — before writing any CSS. Each page has a heading order that
+                reads like an outline, and every image has real alternative text.</p>
+            </div>
+          </li>
+          <li>
+            <span class="num">02</span>
+            <div>
+              <h3>Layout without a framework</h3>
+              <p>CSS custom properties for the palette, grid and flexbox for the layout, and
+                <code>clamp()</code> for type that grows with the screen. The same file handles
+                a 320 px phone and a wide desktop.</p>
+            </div>
+          </li>
+          <li>
+            <span class="num">03</span>
+            <div>
+              <h3>JavaScript that does one job</h3>
+              <p>Three small scripts: one fetches the shared navigation, one picks a random
+                quote, and one runs the machine and its game. No library, no bundler.</p>
+            </div>
+          </li>
+          <li>
+            <span class="num">04</span>
+            <div>
+              <h3>DRY navigation</h3>
+              <p>The menu is written once in <code>nav.html</code> and copied into every page at
+                runtime by <code>nav.js</code>. Adding a page means editing one file, not five.</p>
+            </div>
+          </li>
+          <li>
+            <span class="num">05</span>
+            <div>
+              <h3>Accessibility</h3>
+              <p>Keyboard reachable controls, visible focus, a skip link, labels and
+                <code>aria-live</code> status messages, and a reduced-motion version of every
+                animation. The game can be played with the keyboard alone.</p>
+            </div>
+          </li>
+          <li>
+            <span class="num">06</span>
+            <div>
+              <h3>Git and publishing</h3>
+              <p>One repository, meaningful commits, and a live site published from the
+                <code>main</code> branch. Every push updates the address people can open.</p>
+            </div>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="section section--tight" aria-labelledby="built">
+      <div class="wrap">
+        <hr class="rule">
+        <dl class="fact-grid">
+          <div class="fact">
+            <dt>Built with</dt>
+            <dd>Plain HTML, CSS and JavaScript</dd>
+          </div>
+          <div class="fact">
+            <dt>Tools</dt>
+            <dd>VS Code and Live Server</dd>
+          </div>
+          <div class="fact">
+            <dt>Files</dt>
+            <dd>5 pages · 1 stylesheet · 3 scripts</dd>
+          </div>
+          <div class="fact">
+            <dt>Hosted on</dt>
+            <dd>GitHub Pages</dd>
+          </div>
+        </dl>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="site-footer__inner">
+      <span>© 2026 Chen Xiangyang · Field Notes</span>
+      <span class="site-footer__links">
+        <a href="https://cxy0218-blog.pages.dev/" target="_blank" rel="noopener noreferrer">Personal site ↗</a>
+        <a href="index.html">Back to top</a>
+      </span>
+    </div>
+  </footer>
+
+  <script src="nav.js"></script>
+</body>
+</html>
